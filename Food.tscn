@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://mob140fhqgsx"]
+
+[ext_resource type="Script" path="res://script/Food.gd" id="1_tguno"]
+[ext_resource type="Texture2D" uid="uid://cbm02sm7b0vrv" path="res://tex/Food.svg" id="2_ax5uq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jmjpl"]
+
+[node name="Food" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_tguno")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ax5uq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jmjpl")
